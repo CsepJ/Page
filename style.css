@@ -1,0 +1,113 @@
+* {
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  user-select:none;
+}
+body{
+  background: url("image/bg.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+nav {
+  font-family:"Jua",sans-serif;
+  width:100%;
+  height:auto;
+  background:#fb4343;
+  font-size:1.2rem;
+  font-weight:bold;
+  position:relative;
+  color:white;
+}
+nav ul {
+  display: none;
+  height: auto;
+}
+nav ul li {
+  display: block;
+  width: 100%;
+  text-align:center;
+  border-bottom: 1px solid #576979;
+}
+nav ul li span {
+  line-height:50px;
+}      
+nav span#trigger {
+  display:block;
+  background-color:#fb4343;
+  width:100%;
+  padding-left:15px;
+  line-height:40px;    
+  position:relative;
+}
+nav span#trigger::after {
+  content: "";
+  background: url('image/menu.svg') no-repeat;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  position: absolute;
+  right: 15px;
+  top: 10px;
+}        
+nav ul li:hover{
+  cursor:pointer;
+}
+#page{
+  color:snow;
+  text-align:center;
+  font-size:10vh;
+  font-family: 'Black Han Sans', sans-serif;
+}
+table, th, td {
+  border: 1px solid snow;
+  border-collapse: collapse;
+  text-align:center;
+  margin: 0 auto;
+  background:#ff84ad;
+  overflow:auto;
+  user-select:none;
+  font-size:2.5vh;
+}
+table{
+  height:95vh;
+  width:100%;
+}
+#des{
+  font-size:5vh;
+}
+@media screen and (min-width:721px) {
+  nav {
+    height: 70px;
+    border-bottom:2px solid #fb4343;
+  }
+  nav ul {
+    display:block;
+    width:600px; /*Check here*/
+    height:70px;
+    padding: 0;
+    margin:0 auto;        
+  }
+  nav ul li {
+    display:inline-block;
+    width:150px;   
+    border-bottom:0;
+    border-right: 1px solid #fb4343;
+    margin-right:-6px;
+  }
+  nav ul li:last-child {
+    border-right: 0;
+  } 
+  nav ul li span{
+    font-size:2em;
+    line-height:70px;
+    user-select:none;
+  }
+  nav span#trigger {
+    display: none;
+  }          
+}
