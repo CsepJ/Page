@@ -1,3 +1,2 @@
-# Main Page Repo
-- - -
-### CsepJ's Bot page
+# *Sep - My Messenger bot Site*
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)[![Generic badge](https://img.shields.io/badge/Sepbot-Page-green.svg)](https://sepbot.tk)
