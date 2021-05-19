@@ -61,7 +61,7 @@ nav ul li:hover{
   color:snow;
   text-align:center;
   font-size:10vh;
-  font-family: 'Black Han Sans', sans-serif;
+  font-family: 'Jua', sans-serif;
 }
 table, th, td {
   border: 1px solid snow;
@@ -87,7 +87,7 @@ table{
   }
   nav ul {
     display:block;
-    width:600px; /*Check here*/
+    width:610px; /*Check here*/
     height:70px;
     padding: 0;
     margin:0 auto;        
