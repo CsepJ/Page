@@ -17,7 +17,7 @@ nav {
   font-family:"Jua",sans-serif;
   width:100%;
   height:auto;
-  background:#fb4343;
+  background:#F44444;
   font-size:1.2rem;
   font-weight:bold;
   position:relative;
@@ -32,8 +32,6 @@ nav ul li {
   width: 100%;
   text-align:center;
   border-bottom: 1px solid #576979;
-}
-nav ul li span {
   line-height:50px;
 }      
 nav span#trigger {
@@ -63,22 +61,9 @@ nav ul li:hover{
   font-size:10vh;
   font-family: 'Jua', sans-serif;
 }
-table, th, td {
-  border: 1px solid snow;
-  border-collapse: collapse;
-  text-align:center;
-  margin: 0 auto;
-  background:#ff84ad;
-  overflow:auto;
-  user-select:none;
-  font-size:2.5vh;
-}
 table{
   height:95vh;
   width:100%;
-}
-#des{
-  font-size:5vh;
 }
 @media screen and (min-width:721px) {
   nav {
@@ -87,10 +72,13 @@ table{
   }
   nav ul {
     display:block;
-    width:610px; /*Check here*/
+    width:760px; /*Check here*/
     height:70px;
     padding: 0;
     margin:0 auto;        
+  }
+  nav ul li#logo, nav #trigger{
+    color: #c300ff;
   }
   nav ul li {
     display:inline-block;
@@ -98,11 +86,6 @@ table{
     border-bottom:0;
     border-right: 1px solid #fb4343;
     margin-right:-6px;
-  }
-  nav ul li:last-child {
-    border-right: 0;
-  } 
-  nav ul li span{
     font-size:2em;
     line-height:70px;
     user-select:none;
