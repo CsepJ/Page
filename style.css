@@ -7,7 +7,8 @@
   user-select:none;
 }
 body{
-  background: url("image/bg.jpg") no-repeat center center fixed; 
+  background: linear-gradient(127deg, #F44444, rgba(255,0,0,0) 70.71%), linear-gradient(336deg, #d144f4, rgba(0,255,0,0) 70.71%),linear-gradient(217deg, #0ff193, rgba(0,0,255,0) 70.71%) no-repeat;
+  background-attachment:fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -21,7 +22,7 @@ nav {
   font-size:1.2rem;
   font-weight:bold;
   position:relative;
-  color:white;
+  color: rgb(230, 220, 130);
 }
 nav ul {
   display: none;
@@ -78,7 +79,7 @@ table{
     margin:0 auto;        
   }
   nav ul li#logo, nav #trigger{
-    color: #c300ff;
+    color: #0ff193;
   }
   nav ul li {
     display:inline-block;
