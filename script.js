@@ -14,24 +14,60 @@ $(document).on("ready", () => {
     $("body").fadeIn("slow");
 })
 document.addEventListener("DOMContentLoaded", event => {
-    let trigger = $('#trigger');
-    let menu = $('nav ul');
-    let main = $('#logo');
-    let bot = $('#bot');
-    let support = $("#support");
-    let notice = $("#notice");
-    let update = $("#update");
+    const trigger = $('#trigger');
+    const menu = $('nav ul');
+    const logo = $('#logo');
+    const bot = $('#bot');
+    const command = $("#command");
+    const notice = $("#notice");
+    const update = $("#update");
+    const command_url = "https://Sepbot.repl.co/cmd";
+    // Hover Event
+    logo.hover(() => {
+        logo.css("color", "#d144f4");
+    },() => {
+        logo.css("color", "#0ff193");
+    });
+    bot.hover(() => {
+        bot.css("color", "#0ff193");
+    },() => {
+        bot.css("color", "rgb(230, 220, 130)");
+    });
+    command.hover(() => {
+        command.css("color", "#0ff193");
+    },() => {
+        command.css("color", "rgb(230, 220, 130)");
+    });
+    notice.hover(() => {
+        notice.css("color", "#0ff193");
+    },() => {
+        notice.css("color", "rgb(230, 220, 130)");
+    });
+    update.hover(() => {
+        update.css("color", "#0ff193");
+    },() => {
+        update.css("color", "rgb(230, 220, 130)");
+    });
+    // Click Event
     $(update).on("click", () => {
         document.getElementById("page").innerHTML = `${msg.update}`;
     });
-    $(main).on("click", () => {
+    $(logo).on("click", () => {
         document.getElementById("page").innerHTML = "";
     });
     $(bot).on("click", () => {
         document.getElementById("page").innerHTML = `${msg.join}`
     });
-    $(support).on("click", () => {
-        document.getElementById("page").innerHTML = `${msg.support}`
+    $(command).on("click", () => {
+        console.log("Event On");
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST", command_url, true);
+        xhr.onerror = () => {
+            console.log("error");
+        };
+        xhr.onload = () => {
+            console.log(xhr.response);
+        }
     });
     $(notice).on("click", () => {
         document.getElementById("page").innerHTML = `${msg.notice}`

@@ -22,40 +22,6 @@
         <script type="text/javascript" src="jquery-min.js"></script>
         <link rel="stylesheet" type="text/css" href="style.css">
         <script type="text/javascript" src="script.js"></script>
-        <script>
-            document.addEventListener("DOMContentLoaded", () => {
-                const update = $("#update");
-                const logo = $("#logo");
-                const bot = $("#bot");
-                const support = $("#support");
-                const notice = $("#notice");
-                logo.hover(() => {
-                    logo.css("color", "#d144f4");
-                },() => {
-                    logo.css("color", "#0ff193");
-                });
-                bot.hover(() => {
-                    bot.css("color", "#0ff193");
-                },() => {
-                    bot.css("color", "rgb(230, 220, 130)");
-                });
-                support.hover(() => {
-                    support.css("color", "#0ff193");
-                },() => {
-                    support.css("color", "rgb(230, 220, 130)");
-                });
-                notice.hover(() => {
-                    notice.css("color", "#0ff193");
-                },() => {
-                    notice.css("color", "rgb(230, 220, 130)");
-                });
-                update.hover(() => {
-                    update.css("color", "#0ff193");
-                },() => {
-                    update.css("color", "rgb(230, 220, 130)");
-                });
-            });
-        </script>
     </head>
 <body>
     <nav>
@@ -63,11 +29,21 @@
             <li id="logo">Sepcod</li>
             <li id="bot">추가</li>
             <li id="notice">공지</li>
-            <li id="support">문의</li>
+            <li id="command">명령어</li>
             <li id="update">로그</li>
         </ul>
         <span id="trigger">Sepcod</span>
       </nav>
       <span id="page"></span>
+      <footer>
+          <ul>
+            <li id="SepJ">
+                Made By SepJ
+            </li>
+            <li id="">
+
+            </li>
+          </ul>
+      </footer>
 </body>
 </html>
