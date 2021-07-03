@@ -37,6 +37,7 @@ nav ul li {
 }      
 nav span#trigger {
   display:block;
+  color:#0ff193;
   background-color:#fb4343;
   width:100%;
   padding-left:15px;
@@ -62,19 +63,15 @@ nav ul li:hover{
   font-size:10vh;
   font-family: 'Jua', sans-serif;
 }
-table{
-  height:95vh;
-  width:100%;
-}
 @media screen and (min-width:721px) {
   nav {
-    height: 70px;
-    border-bottom:2px solid #fb4343;
+    height: 15vh;
+    border-bottom:2vh solid #fb4343;
   }
   nav ul {
     display:block;
     width:760px; /*Check here*/
-    height:70px;
+    height:30vh;
     padding: 0;
     margin:0 auto;        
   }
@@ -87,8 +84,8 @@ table{
     border-bottom:0;
     border-right: 1px solid #fb4343;
     margin-right:-6px;
-    font-size:2em;
-    line-height:70px;
+    font-size:4.5vh;
+    line-height:15vh;
     user-select:none;
   }
   nav span#trigger {
