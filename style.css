@@ -6,6 +6,21 @@
   -webkit-box-sizing: border-box;
   user-select:none;
 }
+footer{
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: snow;
+  text-align: center;
+  background-color: gray;
+}
+footer ul{
+  text-decoration: none;
+}
+footer ul li{
+  color: #0ff193;
+}
 body{
   background: linear-gradient(127deg, #F44444, rgba(255,0,0,0) 70.71%), linear-gradient(336deg, #d144f4, rgba(0,255,0,0) 70.71%),linear-gradient(217deg, #0ff193, rgba(0,0,255,0) 70.71%) no-repeat;
   background-attachment:fixed;
@@ -84,7 +99,7 @@ nav ul li:hover{
     border-bottom:0;
     border-right: 1px solid #fb4343;
     margin-right:-6px;
-    font-size:4.5vh;
+    font-size:5vh;
     line-height:15vh;
     user-select:none;
   }

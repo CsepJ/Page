@@ -9,6 +9,11 @@ const msg = {
     join: "<span style='overflow:auto;'><p><a href='https://discord.com/oauth2/authorize?client_id=764104980218118194&amp;permissions=0&amp;scope=bot' style='width:10%;text-decoration:line-though;;color:#d144f4;'>Sepbot</a></p><p><a href='https://discord.com/api/oauth2/authorize?client_id=850706596463116309&permissions=8&scope=bot' style='width:10%;text-decoration:line-though;color:#0ff193;'>Sonnet</a></p></span>",
     welcome: "<p>SepCod</p>"
 };
+const url = {
+    cmd: "https://Sepbot.repl.co/cmd",
+    support: "https://discord.gg/rJsuRUajSu",
+    dev: "https://github.com/CsepJ"
+}
 $(document).on("ready", () => {
     $("body").fadeOut("slow");
     $("body").fadeIn("slow");
@@ -18,11 +23,26 @@ document.addEventListener("DOMContentLoaded", event => {
     const menu = $('nav ul');
     const logo = $('#logo');
     const bot = $('#bot');
+    const support = $("#support_link");
     const command = $("#command");
     const notice = $("#notice");
     const update = $("#update");
-    const command_url = "https://Sepbot.repl.co/cmd";
+    const dev = $("#SepJ");
     // Hover Event
+    dev.hover(() => {
+        dev.css("color", "blue");
+        dev.css("text-decoration", "underline");
+    }, () => {
+        dev.css("color", "#0ff193");
+        dev.css("text-decoration", "none");
+    });
+    support.hover(() => {
+        support.css("color", "blue");
+        support.css("text-decoration", "underline");
+    }, () => {
+        support.css("color", "#0ff193");
+        support.css("text-decoration", "none");
+    });
     logo.hover(() => {
         logo.css("color", "#d144f4");
     },() => {
@@ -49,6 +69,12 @@ document.addEventListener("DOMContentLoaded", event => {
         update.css("color", "rgb(230, 220, 130)");
     });
     // Click Event
+    $(dev).on("click", ()=>{
+        window.open(url.dev);
+    })
+    $(support).on("click", () => {
+        window.open(url.support);
+    })
     $(update).on("click", () => {
         document.getElementById("page").innerHTML = `${msg.update}`;
     });
@@ -59,14 +85,10 @@ document.addEventListener("DOMContentLoaded", event => {
         document.getElementById("page").innerHTML = `${msg.join}`
     });
     $(command).on("click", () => {
-        console.log("Event On");
         const xhr = new XMLHttpRequest();
-        xhr.open("POST", command_url, true);
-        xhr.onerror = () => {
-            console.log("error");
-        };
-        xhr.onload = () => {
-            console.log(xhr.response);
+        xhr.open("POST", url.cmd, true);
+        xhr.onreadystatechange = function(){
+            console.log(xhr.responseText);
         }
     });
     $(notice).on("click", () => {
