@@ -104,7 +104,8 @@ document.addEventListener("DOMContentLoaded", event => {
         xhr.open("POST", url.cmd);
         xhr.send(null);
         xhr.onload = function(){
-            console.log(xhr.response);
+            const result = xhr.response.map((cmd)=>cmd.cmd+" | "+cmd.description);
+            $('#page').text(result.join("\n\n"));
             menu_slide();
         }
     });
