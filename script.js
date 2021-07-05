@@ -103,8 +103,8 @@ document.addEventListener("DOMContentLoaded", event => {
         const xhr = new XMLHttpRequest();
         xhr.open("POST", url.cmd);
         xhr.send(null);
-        xhr.onreadystatechange = function(){
-            console.log(xhr.responseText);
+        xhr.onload = function(){
+            console.log(xhr.response);
             menu_slide();
         }
     });
