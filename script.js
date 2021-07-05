@@ -104,8 +104,7 @@ document.addEventListener("DOMContentLoaded", event => {
         xhr.open("POST", url.cmd);
         xhr.send(null);
         xhr.onload = function(){
-            const result = xhr.response;
-            console.log(typeof result);
+            const result = JSON.parse(xhr.response);
             result = result.map((cmd)=>cmd.cmd+" | "+cmd.description);
             $('#page').text(result.join("\n\n"));
             menu_slide();
