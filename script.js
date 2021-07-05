@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", event => {
         xhr.send(null);
         xhr.onload = function(){
             const result = JSON.parse(xhr.response).map((cmd)=>cmd.cmd+" | "+cmd.description);
-            $('#page').text(result.join("\n\n"));
+            $('#page').text(result.join("<br><br>"));
             menu_slide();
         }
     });
