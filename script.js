@@ -1,10 +1,10 @@
 const text = {
-    notice: "Nyunbot이 서비스종료하였습니다. <br> 노래 봇인 Sonnet가 출시되었습니다.",
-    update: "Sepbot에 노래기능이 폐지되었습니다.<br>Sonnet에 대신 노래기능이 들어갔습니다. <br> Sepbot에 퀴즈기능이 들어갔습니다."
+    notice: "Nyunbot: 서비스 종료<br>Sonnet(음악봇): 출시",
+    update: "Sepbot:노래기능 삭제<br>Sepbot:퀴즈기능 추가"
 };
 const msg = {
-    update: `<p style="color:F44444">업데이트</p><p style="font-size:2rem; color: #0ff193">${text.update}</p>`,
-    notice: `<p style="color:#fb4343">공지사항</p><p style="font-size:2.5rem; color: #d144f4;">${text.notice}</p>`,
+    update: `<p id="title" style="color:snow">업데이트</p><p style="color: snow">${text.update}</p>`,
+    notice: `<p id="title" style="color:snow">공지사항</p><p style="color: snow;">${text.notice}</p>`,
     support: '\<p><a href="https://discord.gg/kVMCumDa" id="discord" style="text-decoration:none; cursor:default; color:skyblue;">디스코드</a></p>',
     join: "<span style='overflow:auto;'><p><a href='https://discord.com/oauth2/authorize?client_id=764104980218118194&amp;permissions=0&amp;scope=bot' style='width:10%;text-decoration:line-though;;color:#d144f4;'>Sepbot</a></p><p><a href='https://discord.com/api/oauth2/authorize?client_id=850706596463116309&permissions=8&scope=bot' style='width:10%;text-decoration:line-though;color:#0ff193;'>Sonnet</a></p></span>",
     welcome: "<p>SepCod</p>"
@@ -28,6 +28,16 @@ document.addEventListener("DOMContentLoaded", event => {
     const notice = $("#notice");
     const update = $("#update");
     const dev = $("#SepJ");
+    const menu_slide = function(){
+        var width = $(window).width();
+        if(width<=720){
+            menu.slideToggle();
+            return true;
+        }else{
+            return false;
+        }
+    }
+    const haveMenu = $(window).width<=720;
     // Hover Event
     dev.hover(() => {
         dev.css("color", "blue");
@@ -71,28 +81,36 @@ document.addEventListener("DOMContentLoaded", event => {
     // Click Event
     $(dev).on("click", ()=>{
         window.open(url.dev);
+        menu_slide();
     })
     $(support).on("click", () => {
         window.open(url.support);
+        menu_slide();
     })
     $(update).on("click", () => {
         document.getElementById("page").innerHTML = `${msg.update}`;
+        menu_slide();
     });
     $(logo).on("click", () => {
         document.getElementById("page").innerHTML = "";
+        menu_slide();
     });
     $(bot).on("click", () => {
         document.getElementById("page").innerHTML = `${msg.join}`
+        menu_slide();
     });
     $(command).on("click", () => {
         const xhr = new XMLHttpRequest();
-        xhr.open("POST", url.cmd, true);
+        xhr.open("POST", url.cmd);
+        xhr.send(null);
         xhr.onreadystatechange = function(){
             console.log(xhr.responseText);
+            menu_slide();
         }
     });
     $(notice).on("click", () => {
         document.getElementById("page").innerHTML = `${msg.notice}`
+        menu_slide();
     });
     $(trigger).on('click', function(e) {
         e.preventDefault();
