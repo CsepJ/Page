@@ -5,15 +5,12 @@ const text = {
 const url = {
     cmd: "https://Sepbot.repl.co/cmd",
     support: "https://discord.gg/rJsuRUajSu",
-    dev: "https://github.com/CsepJ",
-    sepbot: "https://discord.com/api/oauth2/authorize?client_id=764104980218118194&permissions=8&scope=bot%20applications.commands",
-    sonnet: "https://discord.com/api/oauth2/authorize?client_id=850706596463116309&permissions=8&scope=bot%20applications.commands"
+    dev: "https://github.com/CsepJ"
 }
 const msg = {
     update: `<p id="title" style="color:snow">업데이트</p><p style="color: snow">${text.update}</p>`,
     notice: `<p id="title" style="color:snow">공지사항</p><p style="color: snow;">${text.notice}</p>`,
     support: '\<p><a href="https://discord.gg/kVMCumDa" id="discord" style="text-decoration:none; cursor:default; color:skyblue;">디스코드</a></p>',
-    join: '<div id="invite" style="text-align: center;"><p id="invite_sepbot" style="color:#d144f4">Sepbot</p><p id="invite_sonnet" color:#0ff193>Sonnet</p></div>',
     welcome: "<p>SepCod</p>"
 };
 $(document).on("ready", () => {
@@ -30,8 +27,6 @@ document.addEventListener("DOMContentLoaded", event => {
     const notice = $("#notice");
     const update = $("#update");
     const dev = $("#SepJ");
-    const invite_sepbot = $("#sepbot");
-    const invite_sonnet = $("#sonnet");
     const menu_slide = function(){
         var width = $(window).width();
         if(width<=720){
@@ -82,12 +77,6 @@ document.addEventListener("DOMContentLoaded", event => {
         update.css("color", "rgb(230, 220, 130)");
     });
     // Click Event
-    $(invite_sepbot).on("click", () => {
-        window.open(url.sepbot);
-    });
-    $(invite_sonnet).on("click", () => {
-        window.open(url.sonnet);
-    });
     $(dev).on("click", ()=>{
         window.open(url.dev);
         menu_slide();
@@ -105,7 +94,7 @@ document.addEventListener("DOMContentLoaded", event => {
         menu_slide();
     });
     $(bot).on("click", () => {
-        document.getElementById("page").innerHTML = `${msg.join}`
+        window.open("invite.html");
         menu_slide();
     });
     $(command).on("click", () => {
