@@ -13,10 +13,6 @@ const msg = {
     support: '\<p><a href="https://discord.gg/kVMCumDa" id="discord" style="text-decoration:none; cursor:default; color:skyblue;">디스코드</a></p>',
     welcome: "<p>SepCod</p>"
 };
-$(document).on("ready", () => {
-    $("body").fadeOut("slow");
-    $("body").fadeIn("slow");
-})
 document.addEventListener("DOMContentLoaded", event => {
     const trigger = $('#trigger');
     const menu = $('nav ul');
