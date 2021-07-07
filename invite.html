@@ -4,15 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="jquery-min.js"></script>
     <title>Sepcod - 초대</title>
     <script>
-        location.href = "https://discord.com/api/oauth2/authorize?client_id=764104980218118194&permissions=8&scope=bot%20applications.commands";
-        location.href = "https://discord.com/api/oauth2/authorize?client_id=850706596463116309&permissions=8&scope=bot%20applications.commands";
         document.addEventListener("DOMContentLoaded", () => {
-            window.close();
+            const sepbot = $("#sepbot");
+            const sonnet = $("#sonnet");
+            $(sepbot).on("click", () => {
+                location.href = "https://discord.com/api/oauth2/authorize?client_id=764104980218118194&permissions=8&scope=bot%20applications.commands";
+            });
+            $(sonnet).on("click", () => {
+                location.href = "https://discord.com/api/oauth2/authorize?client_id=850706596463116309&permissions=8&scope=bot%20applications.commands";
+            });
         })
     </script>
 </head>
 <body>
+    <div id="page">
+        <div id="sepbot" style="color: #d144f4;">Sepbot</div>
+        <div id="sonnet" style="color: #0ff193;">Sonnet</div>
+    </div>
 </body>
 </html>
