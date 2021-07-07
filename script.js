@@ -13,9 +13,13 @@ const msg = {
     update: `<p id="title" style="color:snow">업데이트</p><p style="color: snow">${text.update}</p>`,
     notice: `<p id="title" style="color:snow">공지사항</p><p style="color: snow;">${text.notice}</p>`,
     support: '\<p><a href="https://discord.gg/kVMCumDa" id="discord" style="text-decoration:none; cursor:default; color:skyblue;">디스코드</a></p>',
-    join: `<span style='overflow:auto;'><p><span id="invite_sepbot" style='width:10%;text-decoration:line-though;color:#F44444;'>Sepbot</a></p><p><span id="invite_sonnet style='width:10%;text-decoration:line-though;color:#0ff193;'>Sonnet</a></p></span>`,
+    join: '<div id="invite" style="text-align: center;"><p id="invite_sepbot" style="color:#d144f4">Sepbot</p><p id="invite_sonnet" color:#0ff193>Sonnet</p></div>',
     welcome: "<p>SepCod</p>"
 };
+$(document).on("ready", () => {
+    $("body").fadeOut("slow");
+    $("body").fadeIn("slow");
+})
 document.addEventListener("DOMContentLoaded", event => {
     const trigger = $('#trigger');
     const menu = $('nav ul');
@@ -26,8 +30,8 @@ document.addEventListener("DOMContentLoaded", event => {
     const notice = $("#notice");
     const update = $("#update");
     const dev = $("#SepJ");
-    const invite_sepbot = $("#invite_sepbot");
-    const invite_sonnet = $("#invite_sonnet");
+    const invite_sepbot = $("#sepbot");
+    const invite_sonnet = $("#sonnet");
     const menu_slide = function(){
         var width = $(window).width();
         if(width<=720){
@@ -37,7 +41,6 @@ document.addEventListener("DOMContentLoaded", event => {
             return false;
         }
     }
-    const haveMenu = $(window).width<=720;
     // Hover Event
     dev.hover(() => {
         dev.css("color", "blue");
@@ -84,11 +87,11 @@ document.addEventListener("DOMContentLoaded", event => {
     });
     $(invite_sonnet).on("click", () => {
         window.open(url.sonnet);
-    })
+    });
     $(dev).on("click", ()=>{
         window.open(url.dev);
         menu_slide();
-    })
+    });
     $(support).on("click", () => {
         window.open(url.support);
         menu_slide();
