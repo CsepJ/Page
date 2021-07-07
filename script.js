@@ -2,18 +2,20 @@ const text = {
     notice: "Nyunbot: 서비스 종료<br>Sonnet(음악봇): 출시",
     update: "Sepbot:노래기능 삭제<br>Sepbot:퀴즈기능 추가"
 };
+const url = {
+    cmd: "https://Sepbot.repl.co/cmd",
+    support: "https://discord.gg/rJsuRUajSu",
+    dev: "https://github.com/CsepJ",
+    sepbot: "https://discord.com/api/oauth2/authorize?client_id=764104980218118194&permissions=8&scope=bot%20applications.commands",
+    sonnet: "https://discord.com/api/oauth2/authorize?client_id=850706596463116309&permissions=8&scope=bot%20applications.commands"
+}
 const msg = {
     update: `<p id="title" style="color:snow">업데이트</p><p style="color: snow">${text.update}</p>`,
     notice: `<p id="title" style="color:snow">공지사항</p><p style="color: snow;">${text.notice}</p>`,
     support: '\<p><a href="https://discord.gg/kVMCumDa" id="discord" style="text-decoration:none; cursor:default; color:skyblue;">디스코드</a></p>',
-    join: "<span style='overflow:auto;'><p><a href='https://discord.com/oauth2/authorize?client_id=764104980218118194&amp;permissions=0&amp;scope=bot' style='width:10%;text-decoration:line-though;;color:#d144f4;'>Sepbot</a></p><p><a href='https://discord.com/api/oauth2/authorize?client_id=850706596463116309&permissions=8&scope=bot' style='width:10%;text-decoration:line-though;color:#0ff193;'>Sonnet</a></p></span>",
+    join: `<span style='overflow:auto;'><p><a href=${url.sepbot} style='width:10%;text-decoration:line-though;;color:#F44444;'>Sepbot</a></p><p><a href=${url.sonnet} style='width:10%;text-decoration:line-though;color:#0ff193;'>Sonnet</a></p></span>`,
     welcome: "<p>SepCod</p>"
 };
-const url = {
-    cmd: "https://Sepbot.repl.co/cmd",
-    support: "https://discord.gg/rJsuRUajSu",
-    dev: "https://github.com/CsepJ"
-}
 $(document).on("ready", () => {
     $("body").fadeOut("slow");
     $("body").fadeIn("slow");
