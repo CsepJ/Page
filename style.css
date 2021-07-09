@@ -16,9 +16,10 @@ body{
 }
 footer{
   background-color: gray;
-  bottom:0;
+  bottom:0%;
   color: #0ff193;
   padding: 3%;
+  border: 1px solid #F44444;
   width: 100%;
   position: absolute;
   font-family: "Gugi", sans-serif;
