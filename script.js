@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", event => {
         xhr.send(null);
         xhr.onload = function(){
             const result = JSON.parse(xhr.response).map((cmd)=>cmd.cmd+" | "+cmd.description);
-            $("#page").html("<div style='text-align:center'>"+result.join("<br><br>")+"</div>");
+            $("#page").html("<div style='text-align:center; padding:10%;'>"+result.join("<br><br>")+"</div>");
             menu_slide();
         }
     });
