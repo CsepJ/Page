@@ -94,6 +94,7 @@ document.addEventListener("DOMContentLoaded", event => {
         menu_slide();
     });
     $(command).on("click", () => {
+        try{
         const xhr = new XMLHttpRequest();
         xhr.open("POST", url.cmd);
         xhr.send(null);
@@ -102,6 +103,9 @@ document.addEventListener("DOMContentLoaded", event => {
             $("#page").html("<div style='text-align:center'>"+result.join("<br><br>")+"</div>");
             menu_slide();
         }
+    }catch(e){
+        $("#page").html("<div style='text-align:center;'>"+new Array(100).fill("셉봇").join("<br><br>")+"</div>");
+    }
     });
     $(notice).on("click", () => {
         document.getElementById("page").innerHTML = `${msg.notice}`

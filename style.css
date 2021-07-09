@@ -5,6 +5,7 @@
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   user-select:none;
+  width: 100%;
 }
 body{
   background: linear-gradient(127deg, #F44444, rgba(255,0,0,0) 70.71%), linear-gradient(336deg, #d144f4, rgba(0,255,0,0) 70.71%),linear-gradient(217deg, #0ff193, rgba(0,0,255,0) 70.71%) no-repeat;
@@ -13,7 +14,6 @@ body{
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  overflow-y: scroll;
 }
 footer{
   background-color: gray;
@@ -22,7 +22,7 @@ footer{
   padding: 3%;
   border: 1px solid #F44444;
   width: 100%;
-  position: absolute;
+  position: fixed;
   font-family: "Gugi", sans-serif;
 }
 footer ul{
