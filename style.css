@@ -77,7 +77,6 @@ nav ul li:hover{
   color:snow;
   text-align:center;
   font-family: 'Jua', sans-serif;
-  overflow-y:scroll;
 }
 @media screen and (min-width:721px) {
   nav {
