@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="sn_uxC7AlgIOOuor7TucvIPaKHaYdAnlkUQbcKHYJL0" />
+    <meta name="naver-site-verification" content="067da9829375abfd14269c8ada989c11c8d73504" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gugi&family=Jua&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+    <title>Error - 404</title>
+    <script type="text/javascript" src="./jquery-min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", (event) => {
+            const home = $("#home");
+            $(home).on("click", ()=>{
+                location.href = "/";
+            })
+        })
+    </script>
+    <style>
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    user-select:none;
+  }
+  body{
+    background: linear-gradient(127deg, #F44444, rgba(255,0,0,0) 70.71%), linear-gradient(336deg, #d144f4, rgba(0,255,0,0) 70.71%),linear-gradient(217deg, #0ff193, rgba(0,0,255,0) 70.71%) no-repeat;
+    background-attachment:fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 25vh;
+  }
+  #error{
+      text-align: center;
+  }
+  #title{
+      font-family: 'Inconsolata', sans-serif;
+      font-size: 7vh;
+      position: relative;
+      top:100%;
+      color: #991010;
+  }    
+  #message{
+    font-family: 'Inconsolata', sans-serif;
+    font-size: 4vh;
+    position: relative;
+    top: 50%;
+    color:#991010;
+  }
+  #home:hover{
+      background-color: #0ff193;
+  }
+    </style>
+</head>
+<body>
+    <div id="error">
+    <div id="title">
+        Error - 404
+    </div>
+    <div id="message">
+        <%= address %> Is Not Found.
+    </div>
+    </div>
+</body>
+</html>

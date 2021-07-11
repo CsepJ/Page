@@ -1,2 +1,2 @@
-# *Sep - My Messenger bot Site*
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)[![Generic badge](https://img.shields.io/badge/Sepbot-Page-green.svg)](https://sepbot.tk)
+# *Sepcod - Messenger bot Site*
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)[![Generic badge](https://img.shields.io/badge/Sepbot-Page-green.svg)](https://sepcod.com)[![Netlify Status](https://api.netlify.com/api/v1/badges/2b2e20f9-5b05-466f-8c9f-d42c1cb3f638/deploy-status)](https://sepcod.com)

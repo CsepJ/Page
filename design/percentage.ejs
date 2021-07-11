@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gugi&family=Jua&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+    <title>Sepcod - <%= percentage %>%가 나오셨습니다!</title>
+    <style>
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    user-select:none;
+  }
+  body{
+    background: linear-gradient(127deg, #F44444, rgba(255,0,0,0) 70.71%), linear-gradient(336deg, #d144f4, rgba(0,255,0,0) 70.71%),linear-gradient(217deg, #0ff193, rgba(0,0,255,0) 70.71%) no-repeat;
+    background-attachment:fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100%;
+  }
+  #message{
+      font-family: 'Black Han Sans', cursive;
+      font-size: 5vh;
+      text-align: center;
+  }
+  #percentage{
+      color:#991010;
+  }
+  #percentage:hover{
+    color: #0ff193;
+  }
+    </style>
+</head>
+<body>
+    <div id="message">
+        <% if(percentage != 100){ %><span id="percentage"><%= percentage %></span>%가 나오셨습니다!<% }else{ %>축하합니다! <span id="percentage"><%= percentage %></span>%이시군요!<% }%>
+    </div>
+</body>
+</html>
