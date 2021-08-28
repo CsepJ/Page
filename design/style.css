@@ -90,7 +90,9 @@ a:visited{
     overflow: scroll;
     font-family: "BMHANNAAir", sans-serif;
     font-size: 1.75rem;
-    border: 0.5vh solid snow;
+    border-top: 0.5vh solid snow;
+    border-bottom: 0.5vh solid snow;
+    border-right: 0.5vh solid snow;
     grid-area: main;
     text-align: center;
 }
@@ -148,7 +150,9 @@ a:visited{
     -o-background-size: cover;
     background-size: cover;
     background-color: gray;
-    border: 0.5vh solid rgb(0,0,0);
+    border-top: 0.5vh solid rgb(0,0,0);
+    border-bottom: 0.5vh solid rgb(0,0,0);
+    border-right: 0.5vh solid rgb(0,0,0);
     color: rgb(255, 255, 255);
     }
 }
