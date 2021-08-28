@@ -8,6 +8,31 @@
     <link rel="stylesheet" href="./style.css">
     <script type="text/javascript" src="./jquery-min.js"></script>
     <title>Sepcod - 초대</title>
+    <style>
+        #page{
+            width: 50%;
+            height: 100%;
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            margin: 0 auto;
+        }
+        #page #sepbot{
+            display: grid;
+            justify-items: center;
+            border: 3px #0ff193 solid;
+            border-radius: 10px;
+            padding: 10%;
+            background-color: rgba(0, 151, 255,0.3);
+        }
+        #page #sonnet{
+            display: grid;
+            justify-items: center;
+            border: 3px #0ff193 solid;
+            border-radius: 10px;
+            padding: 10%;
+            background-color: rgba(0, 151, 255,0.3);
+        }
+    </style>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const sepbot = $("#sepbot");
@@ -18,7 +43,7 @@
             $(sonnet).on("click", () => {
                 location.href = "https://discord.com/api/oauth2/authorize?client_id=850706596463116309&permissions=8&scope=bot%20applications.commands";
             });
-        })
+        });
     </script>
 </head>
 <body style="height: 100%;">
