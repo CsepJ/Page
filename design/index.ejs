@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
+    <head>
+        <meta charset="UTF-8">
         <link rel="canonical" href="https://sepcod.com/">
         <meta name="google-site-verification" content="sn_uxC7AlgIOOuor7TucvIPaKHaYdAnlkUQbcKHYJL0" />
         <meta name="naver-site-verification" content="067da9829375abfd14269c8ada989c11c8d73504" />
@@ -20,26 +20,31 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script type="text/javascript" src="./jquery-min.js"></script>
         <link rel="stylesheet" type="text/css" href="./style.css">
-        <script type="text/javascript" src="./data.js"></script>
         <script type="text/javascript" src="./script.js"></script>
-</head>
+    </head>
 <body>
-    <div class="container">
-        <header class="titlebar">
-            <span id="logo">Sepcod</span>
-        </header> <!-- Header End-->
-        <div id="details">
-            <main id="page">
-                    Tip. <%= tip %> 
-            </main>
-            <nav id="nav">
-                <span id="invite">초대</span>
-                <span id="notice">공지</span>
-                <span id="commands">명령어</span>
-                <span id="support">문의</span>
-                <span id="update">버전</span>
-            </nav>
-        </div>
-    </div>
+    <nav>
+        <ul>
+            <li id="logo">Sepcod</li>
+            <li id="bot">추가</li>
+            <li id="notice">공지</li>
+            <li id="command">명령어</li>
+            <li id="update">로그</li>
+        </ul>
+        <span id="trigger">Sepcod</span>
+      </nav>
+      <span id="page" style="overflow-y:hidden;" ></span>
+      <footer>
+          <ul>
+            <li id="SepJ">
+                Made By SepJ
+            </li>
+            <li id="support">
+                <div id="support_link">
+                    문의
+                </div>
+            </li>
+          </ul>
+      </footer>
 </body>
 </html>
