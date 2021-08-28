@@ -20,10 +20,6 @@ app.use("/", (req,res) => {
     }else if(path == "/sonnet" || path == "/sonnet.html"){
         res.status(200);
         res.redirect("https://discord.com/api/oauth2/authorize?client_id=850706596463116309&permissions=8&scope=bot%20applications.commands");
-    }else if(path == "/easteregg" || path == "/easteregg.html"){
-        var random = Math.floor(Math.random() * 100)+1;
-        res.status(200);
-        res.render("percentage.ejs", {percentage : random});
     }else{
         res.status(404);
         res.statusMessage = "Not Found.";
